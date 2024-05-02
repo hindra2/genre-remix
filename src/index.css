@@ -8,3 +8,9 @@
 * {
   font-family: "Nunito", sans-serif;
 }
+
+@layer base {
+    a {
+    @apply text-blue-500 text-xl underline
+  }
+}
