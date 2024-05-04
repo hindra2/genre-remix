@@ -20,7 +20,7 @@ function App() {
     <div className="flex flex-col h-screen pt-[50px]">
       {/* Title */}
       <div className="flex flex-col items-center">
-        <span className="flex flex-col text-3xl">CFOP vs Roux, Which is Better?</span>
+        <span className="flex flex-col text-3xl font-bold">CFOP vs Roux, Which is Better?</span>
         <span className="flex flex-col text-lg"> This is a submisson for the RHET 105 Genre Remix</span>
       </div>
 
