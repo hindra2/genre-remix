@@ -1,5 +1,8 @@
 import Dropdown from "./components/Dropdown"
 import YouTube, { YouTubeProps } from "react-youtube"
+import Tooltip from "./components/Tooltip";
+
+import { InfoIcon } from "./components/icons";
 
 function App() {
 
@@ -34,6 +37,7 @@ function App() {
 
       {/* Content */}
       <div className="flex flex-col my-[30px] mx-[300px] text-justify text-lg">
+        <h1 className="text-2xl font-bold my-[10px]">The Rubiks Cube</h1>
         <p className="mb-[20px]">
           The Rubik's Cube is a puzzle invented by Erno Rubik in 1974, and since it's release, it has taken the world by storm, capturing the attention of puzzle enthusiasts for decades. With over 43 quintillion possible configurations, no two solves are ever the same. It has inspired millions of people to delve into developing various methods and algorithms to solve the cube. A subsection of these enthusiasts seek to further this dive of knowledge. These people are called speed-cubers. They are a group of people pushing the boundaries on how fast a Rubik's cube can be solved. Not only are they pushing for the optimization of the standard 3x3 puzzle, but also many other categories which you can find more information about <a href="https://www.worldcubeassociation.org/regulations/#article-9-events">here</a>
         .</p>
@@ -43,6 +47,7 @@ function App() {
           <YouTube className="flex m-5 mb-10 w-[40%]" videoId="wrANQio5eD8" opts={opts} onReady={onPlayerReady}/>
         </div>
 
+        <h1 className="text-2xl font-bold my-[10px]">The Two Methods</h1>
         <p className="mb-[20px]">
           In speedcubing. 2 methods are commonly learned and used by competitive and begginer cubers alike, CFOP and Roux. Currently, top cubers such as Max Park, Leo Borneo, and Yiheng Wang, all use CFOP, but there are other cubers such as Kian Mansour and Sean Patrick Villanueva that have top times but use Roux. CFOP utilizes many R, U, D moves, which are considered to be more ergonomic and fast, but have a higher move count, while Roux utilizes the M slice more which results in a lower move count, but less ergonomic turns.
         </p>
@@ -51,14 +56,164 @@ function App() {
           While both these methods have produced impressive solving times, CFOP dominates the speedcubing scene, making up around 90% of the community. This is due to it's more structured and algorithmic approach, leading to a much easier learning method in memorization, while Roux depends on a cuber's intuition, as it doesn't have as much algorithms as CFOP. Because of this dominance, we can't use rankings or statistics to determine which of the methods are better, as it makes for an unfair comparison. This short analysis explores how both CFOP and Roux methods are viable, depending on individual solver preferences and the underexplored nuances of each technique. This is what sparked my interest in this question, as a quick dive into the rabbit hole can narrow down which one of the two methods is more optimal.
         </p>
 
+        <h1 className="flex items-center text-2xl font-bold my-[10px]">HUME&nbsp;
+          <Tooltip
+            width="500px"
+            top="-550%"
+            left="6px"
+            content={
+              <div className="flex flex-col items-center justify-center">
+                <span className="font-medium text-center">The paper was taken from Pochman's diploma thesis which can be found <a href="https://www.stefan-pochmann.info/hume/">here</a>.</span>
+              </div>
+            }
+            >
+            <InfoIcon />
+          </Tooltip>
+        </h1>
         <p className="mb-[20px]">
-          An interesting find, is a paper by Stefan Pochman, a prominent member of the cubing community. He developed a blind solving method, aptly named the Pochman method, later evolving to a faster method called M2/R2. In this paper, he created an algorithm called the "Human Method Evaluator", or HUME. The program is like a virtual cube-solving assistant that analyzes human solving methods by simulating the solving process based on specific subgoals. It's here to help you find the best solving methods, give you some cool stats, and even generate sample solves for you to study. Plus, Pochman explores how HUME can be used for other puzzles. It's like a bridge between human and computer solving methods! Sadly, a working demo of this algorithm.
+          An interesting find, is a paper by&nbsp;
+            <Tooltip 
+              width="700px"
+              top="-950%"
+              left="70px"
+              content={
+                <div>
+                  <h1 className="text-2xl font-bold my-[10px]">Fun Facts About Pochman:</h1>
+                  <div className="ml-[40px]">
+                    <li>First person to officially solve a 5x5 blindfolded!</li>
+                    <li>First person to unofficially solve a Megaminx blindfolded (A megaminx is a docahedron shaped twisty puzzle, which means it has 12 sides!)</li>
+                    <li>Popularized some PLL algorithms for CFOP, such as the N2 perm algorithm which I personally use.</li>
+                  </div>
+                  <span className="flex items-center justify-center mt-5"><a href="https://www.speedsolving.com/wiki/index.php/Stefan_Pochmann">click here</a>&nbsp;to learn more about him!</span>
+                </div>
+              }>
+              <span className="text-blue-500 cursor-pointer">
+                  Stefan Pochman
+              </span>
+            </Tooltip>
+          , a prominent member of the cubing community. He developed a blind solving method, aptly named the Pochman method, later evolving to a faster method called M2/R2. In this paper, he created an algorithm called the "Human Method Evaluator", or HUME. The program is like a virtual cube-solving assistant that analyzes human solving methods by simulating the solving process based on specific subgoals. It's here to help you find the best solving methods, give you some cool stats, and even generate sample solves for you to study. Plus, Pochman explores how HUME can be used for other puzzles. It's like a bridge between human and computer solving methods! Sadly, a working demo of this algorithm.
+        </p>
+
+        <h1 className="flex items-center text-2xl font-bold my-[10px]">Kian Mansour&nbsp;
+          <Tooltip
+            width="500px"
+            top="-550%"
+            left="6px"
+            content={
+              <div className="flex flex-col items-center justify-center">
+                <span className="font-medium text-center">The seminar was from Kian's Youtube channel which can be found <a href="https://www.youtube.com/watch?v=81XdAt5m1uc&t=1167s">here</a>.</span>
+              </div>
+            }
+            >
+            <InfoIcon />
+          </Tooltip>
+        </h1>
+        <p className="mb-[20px]">
+          <Tooltip 
+            width="700px"
+            top="-950%"
+            left="70px"
+            content={
+              <div>
+                <h1 className="text-2xl font-bold my-[10px]">Fun Facts About Kian:</h1>
+                <div className="ml-[40px]">
+                  <li>He is officially the second fastest Roux solver after achieving a 6.52 average at the Pickering Spring 2018 Competition.</li>
+                  <li>Won the 3x3x3 One Handed North American Champion in 2022.</li>
+                  <li>One of the main contributors for the Roux method in developing optimal algorithms for the different stages of Roux.</li>
+                </div>
+                <span className="flex items-center justify-center mt-5"><a href="https://sites.google.com/view/kianroux">click here</a>&nbsp;to learn more about him and Roux!</span>
+              </div>
+            }>
+            <span className="text-blue-500 cursor-pointer">
+                Kian Mansour
+            </span>
+          </Tooltip>
+          &nbsp;also discussed this question in a seminar back in 2018. Leading the development of Roux, he offers a unique POV on the situation, having a much deeper insight than most cubers. He makes a compelling argument that most arguments for this topic are baseless and are not well-structured. For example, someone said, “Felix uses CFOP and has all the current 3x3 records”, which is really just a biased opinion at best. Therefore, he tries to provide a more quantitative conclusion by quantifying each step of the method and pitting them against each other, side by side. In both methods, based on his and other cuber's experience in order to find out, theoretically, which one of the methods are better.
+        </p>
+        <p className="mb-[20px]">
+          Taking into account human limits and general human error, Kian finds that Roux has an average time of 4.0 seconds, while CFOP has an average time of 4.2 seconds. In the end, he also states that his argument is inconclusive, and that slight variations of CFOP will be made in order to compensate for its disadvantage of having  a higher average move count. For example, in CFOP, ZBLL (Zborowski-Bruchem Last Layer), which is a massive set of around 493 algorithms in which PLL and OLL are completed in one algorithm, is more widely used now.
+        </p>
+        <div className="flex items-center justify-center px-10 my-10">
+          <table className="table-fixed border border-collapse">
+            <thead>
+              <tr>
+                <th className="border border-black px-4 py-2 text-center" colSpan={4}>Roux</th>
+                <th className="border border-black px-4 py-2 text-center" colSpan={4}>CFOP</th>
+              </tr>
+              <tr>
+                <th className="border border-black px-4 py-2 text-center">Step</th>
+                <th className="border border-black px-4 py-2 text-center">Moves</th>
+                <th className="border border-black px-4 py-2 text-center">TPS</th>
+                <th className="border border-black px-4 py-2 text-center">Time</th>
+                <th className="border border-black px-4 py-2 text-center">Step</th>
+                <th className="border border-black px-4 py-2 text-center">Moves</th>
+                <th className="border border-black px-4 py-2 text-center">TPS</th>
+                <th className="border border-black px-4 py-2 text-center">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-black px-4 py-2 text-center">FB</td>
+                <td className="border border-black px-4 py-2 text-center">7</td>
+                <td className="border border-black px-4 py-2 text-center">9</td>
+                <td className="border border-black px-4 py-2 text-center">0.8</td>
+                <td className="border border-black px-4 py-2 text-center">X-Cross</td>
+                <td className="border border-black px-4 py-2 text-center">8</td>
+                <td className="border border-black px-4 py-2 text-center">10</td>
+                <td className="border border-black px-4 py-2 text-center">0.8</td>
+              </tr>
+              <tr>
+                <td className="border border-black px-4 py-2 text-center">SB</td>
+                <td className="border border-black px-4 py-2 text-center">15</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">1.2</td>
+                <td className="border border-black px-4 py-2 text-center">F2L</td>
+                <td className="border border-black px-4 py-2 text-center">21</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">1.6</td>
+              </tr>
+              <tr>
+                <td className="border border-black px-4 py-2 text-center">CMLL</td>
+                <td className="border border-black px-4 py-2 text-center">11</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">0.8</td>
+                <td className="border border-black px-4 py-2 text-center">OLL</td>
+                <td className="border border-black px-4 py-2 text-center">11</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">0.8</td>
+              </tr>
+              <tr>
+                <td className="border border-black px-4 py-2 text-center">LSE</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">11</td>
+                <td className="border border-black px-4 py-2 text-center">1.2</td>
+                <td className="border border-black px-4 py-2 text-center">PLL</td>
+                <td className="border border-black px-4 py-2 text-center">15</td>
+                <td className="border border-black px-4 py-2 text-center">15</td>
+                <td className="border border-black px-4 py-2 text-center">1.0</td>
+              </tr>
+              <tr>
+                <td className="border border-black px-4 py-2 text-center">Total</td>
+                <td className="border border-black px-4 py-2 text-center">46</td>
+                <td className="border border-black px-4 py-2 text-center">11.5</td>
+                <td className="border border-black px-4 py-2 text-center">4.0</td>
+                <td className="border border-black px-4 py-2 text-center">Total</td>
+                <td className="border border-black px-4 py-2 text-center">55</td>
+                <td className="border border-black px-4 py-2 text-center">13</td>
+                <td className="border border-black px-4 py-2 text-center">4.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mb-[20px]">
+          
         </p>
       </div>
-      
+
       <div className="flex flex-col my-[30px] mx-[300px] py-[100px] text-lg">
         <div className="flex border-t border-black"></div>
-        <div className="flex justify-center">
+        <div className="flex justify-center text-xl">
           <span>The source code for this article <a href="https://github.com/hindra2/genre-remix.git">is available on GitHub</a>.</span>
         </div>
       </div>
