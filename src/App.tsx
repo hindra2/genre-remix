@@ -243,3 +243,12 @@ function App() {
 
 export default App
 
+In the world of speedcubing, both CFOP and Roux methods have proven their worth, producing impressive solve times and dedicated communities of solvers. While CFOP remains the dominant method, largely due to its structured and algorithmic approach, Roux has its own unique strengths, particularly in terms of move efficiency and intuitive block-building.
+
+The question of which method is ultimately superior remains a topic of much debate and analysis within the cubing community. Stefan Pochmann's development of the HUME algorithm provides a fascinating tool for evaluating and comparing human solving methods, offering insights into the potential of various techniques across different twisty puzzles. Although a working demo of HUME is not yet available, the ideas and algorithms presented in Pochmann's thesis offer a tantalizing glimpse into the future of computer-assisted speedcubing analysis.
+
+Kian Mansour's seminar, which quantified and compared the steps of Roux and CFOP, suggested that Roux may have a slight edge in terms of average solve times, thanks to its lower move count and relatively high TPS. However, as Mansour himself acknowledged, this conclusion is not definitive, as the CFOP community continues to develop advanced techniques and algorithm sets, such as ZBLL, to further optimize their solves.
+
+Ultimately, the choice between CFOP and Roux may come down to individual solver preferences, strengths, and learning styles. While CFOP's structured approach and extensive algorithm sets may appeal to some, others may find Roux's intuitive block-building and lower move count more suitable for their solving style.
+
+As the speedcubing community continues to grow and evolve, it is likely that we will see further refinements and innovations in both methods, as well as the emergence of new techniques and tools for analyzing and optimizing human solving performance. The ongoing exploration of the nuances and potential of CFOP, Roux, and other methods promises to keep the speedcubing world engaging, competitive, and full of exciting possibilities for years to come.
