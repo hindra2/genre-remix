@@ -26,11 +26,9 @@ function App() {
 
       {/* Pre-reading info */}
       <div className="flex flex-col mt-[30px] mx-[300px] text-lg">
-        <p>Before I begin, for people new to Rubik's Cubes, see this:</p>
+        <p>Before I begin, for people new to Rubik's Cubes or the speedcubing community, see this:</p>
         <div className="mx-230px]">
-          <Dropdown text="Rubik's Cube Notation" desc="TLDR: The Rubik's Cube has 3 middle layers (each on the x, y and z axis), and 6 sides. There is a notation for each move, but the relevant ones used here are the 6 sides,  Front (F), Back (B), Up (U), Down (D), Left (L) and Right (R), and the middle layer axis denoted by M. Each move is a notation and represents a clockwise 90-degree turn on its respective face. 180-degree turns can also be represented by adding a 2 behind the notation, i.e. R2 means a 180-degree turn on the R face." img="./notation.png"/>
-          <Dropdown text="CFOP" desc="CFOP. also sometimes called the Fridrich method, was created by Jessica Fridrich. CFOP is the evolution of the beginner layer by layer method, solving the first 2 layers simultaneously and the last layer with 2 algorithms. It is an acronym that stands for the 4 steps involved in solving the cube, Cross, First 2 Layers (F2l), Orientation of Last Layer (OLL) and Permutation of Last Layer (PLL)." />
-          <Dropdown text="Roux" desc='Roux was invented by Gilles Roux, that takes a different approach to solving, being block building. In Roux, solvers first create two 2x3 "blocks" on either side of the cube, leaving the middle layer unsolved, which is then followed by solving the corners of the last layer disregarding the M slice (CMLL) and finally solving the last 6 edges (LSE).' />
+          <Dropdown text="Rubik's Cube Notation" desc="TLDR: The Rubik's Cube has 3 middle layers (each on the x, y and z axis), and 6 sides. There is a notation for each move, but the relevant ones used here are the 6 sides,  Front (F), Back (B), Up (U), Down (D), Left (L) and Right (R), and the middle layer axis denoted by M. Each move is a notation and represents a clockwise 90-degree turn on its respective face. 180-degree turns can also be represented by adding a 2 behind the notation, i.e. R2 means a 180-degree turn on the R face. Here's a short video to help you visualize this:" vid="./notation.mp4"/>
           <Dropdown text="Speedcubing Events" desc=" Although 3x3 is the most famous event in speedcubing, there are a lot more interesting events, such as the bigger cubes 4x4, 5x5, all the way to 7x7, other puzzles, such as the pyraminx, skewb, or square-1, and fun categories like one-handed solving, solving with feet, blindfolded solving, and Fewest Move Count, figuring out least amount of moves you can do to solve a scrambled cube." />
         </div>
       </div>
@@ -39,8 +37,13 @@ function App() {
       <div className="flex flex-col my-[30px] mx-[300px] text-justify text-lg">
         <h1 className="text-2xl font-bold my-[10px]">The Rubiks Cube</h1>
         <p className="mb-[20px]">
-          The Rubik's Cube is a puzzle invented by Erno Rubik in 1974, and since it's release, it has taken the world by storm, capturing the attention of puzzle enthusiasts for decades. With over 43 quintillion possible configurations, no two solves are ever the same. It has inspired millions of people to delve into developing various methods and algorithms to solve the cube. A subsection of these enthusiasts seek to further this dive of knowledge. These people are called speed-cubers. They are a group of people pushing the boundaries on how fast a Rubik's cube can be solved. Not only are they pushing for the optimization of the standard 3x3 puzzle, but also many other categories which you can find more information about <a href="https://www.worldcubeassociation.org/regulations/#article-9-events">here</a>
-        .</p>
+          The Rubik's Cube is a puzzle invented by Erno Rubik in 1974, and since it's release, it has taken the world by storm, capturing the attention of puzzle enthusiasts for decades. With over 43 quintillion possible configurations, no two solves are ever the same. It has inspired millions of people to delve into developing various methods and algorithms to solve the cube. A subsection of these enthusiasts seek to further this dive of knowledge. These people are called speed-cubers. They are a group of people pushing the boundaries on how fast a Rubik's cube can be solved. Not only are they pushing for the optimization of the standard 3x3 puzzle, but also many other categories which you can find more information about <a href="https://www.worldcubeassociation.org/regulations/#article-9-events">here</a>.
+        </p>
+        <p className="mb-[20px]">
+          Here is more information about these two methods:
+        </p>
+        <Dropdown text="CFOP" desc="CFOP. also sometimes called the Fridrich method, was created by Jessica Fridrich. CFOP is the evolution of the beginner layer by layer method, solving the first 2 layers simultaneously and the last layer with 2 algorithms. It is an acronym that stands for the 4 steps involved in solving the cube, Cross, First 2 Layers (F2l), Orientation of Last Layer (OLL) and Permutation of Last Layer (PLL)." />
+        <Dropdown text="Roux" desc='Roux was invented by Gilles Roux, that takes a different approach to solving, being block building. In Roux, solvers first create two 2x3 "blocks" on either side of the cube, leaving the middle layer unsolved, which is then followed by solving the corners of the last layer disregarding the M slice (CMLL) and finally solving the last 6 edges (LSE).' />
 
         <div className="flex items-center justify-center">
           <YouTube className="flex m-5 mb-10 w-[40%]" videoId="gh8HX4itF_w" opts={opts} onReady={onPlayerReady}/>
@@ -81,18 +84,22 @@ function App() {
                   <h1 className="text-2xl font-bold my-[10px]">Fun Facts About Pochman:</h1>
                   <div className="ml-[40px]">
                     <li>First person to officially solve a 5x5 blindfolded!</li>
-                    <li>First person to unofficially solve a Megaminx blindfolded (A megaminx is a docahedron shaped twisty puzzle, which means it has 12 sides!)</li>
+                    <li>First person to unofficially solve a Megaminx blindfolded (A megaminx is a docahedron shaped twisty puzzle, which means it has 12 sides!).</li>
                     <li>Popularized some PLL algorithms for CFOP, such as the N2 perm algorithm which I personally use.</li>
+                    <li>He developed a blind solving method, aptly named the Pochman method, later evolving to a faster method called M2/R2, one of the most used techniques for beginners in blind-solving!</li>
                   </div>
                   <span className="flex items-center justify-center mt-5"><a href="https://www.speedsolving.com/wiki/index.php/Stefan_Pochmann">click here</a>&nbsp;to learn more about him!</span>
                 </div>
               }>
-              <span className="text-blue-500 cursor-pointer">
+              <span className="text-blue-500">
                   Stefan Pochman
               </span>
             </Tooltip>
-          , a prominent member of the cubing community. He developed a blind solving method, aptly named the Pochman method, later evolving to a faster method called M2/R2. In this paper, he created an algorithm called the "Human Method Evaluator", or HUME. The program is like a virtual cube-solving assistant that analyzes human solving methods by simulating the solving process based on specific subgoals. It's here to help you find the best solving methods, give you some cool stats, and even generate sample solves for you to study. Plus, Pochman explores how HUME can be used for other puzzles. It's like a bridge between human and computer solving methods! Sadly, a working demo of this algorithm.
-        </p>
+            , a prominent member of the cubing community.  In this paper, he created an algorithm called the "Human Method Evaluator", or HUME. The program is like a virtual cube-solving assistant that analyzes human solving methods by simulating the solving process based on specific subgoals. It's here to help you find the best solving methods, give you some cool stats, and even generate sample solves for you to study. Plus, Pochman explores how HUME can be used for other puzzles. It's like a bridge between human and computer solving methods! Sadly, a working demo of this algorithm was not uploaded by him.
+          </p>
+          <p className="mb-[20px]">
+          The ideas behind creating HUME and its potential is fascinating. His thesis delves deeper into the inner workings of the algorithm. A brief explanation is that it breaks down a solving method into "subgoals" which it then solves to reach different subgaals in each method, until the puzzle is solved. It's designed to be flexible and work with various twisty puzzles, and not just the classic 3x3 cube. He tested HUME by comparing two solving methods, CFOP and BlockF2L. BlockF2l is a variation of CFOP where instead of doing the cross first, a 2x2 block is built on a corner of the cube and then continues to a 3x2, and so on until the bottom layer is finished, which is preceded by OLL and PLL.  It has a similar approach to Roux, in where blockbuilding is one of it's main aspects, however, it doesn't have the freedom Roux has in its more flexible block-building technique. Although this is not a perfect comparison of CFOP vs Roux, it still arrives in a similar conclusion Kian did. BlockF2L needed fewer moves on average. But Pochmann notes that the ergonomics and finger-friendliness of algorithms also play a big role in speed, which is an area for future exploration.
+          </p>
 
         <h1 className="flex items-center text-2xl font-bold my-[10px]">Kian Mansour&nbsp;
           <Tooltip
@@ -121,17 +128,14 @@ function App() {
                   <li>Won the 3x3x3 One Handed North American Champion in 2022.</li>
                   <li>One of the main contributors for the Roux method in developing optimal algorithms for the different stages of Roux.</li>
                 </div>
-                <span className="flex items-center justify-center mt-5"><a href="https://sites.google.com/view/kianroux">click here</a>&nbsp;to learn more about him and Roux!</span>
+                <span className="flex items-center justify-center mt-5"><a href="https://sites.google.com/view/kianroux">click here</a>&nbsp;to learn more about him and the Roux method!</span>
               </div>
             }>
-            <span className="text-blue-500 cursor-pointer">
+            <span className="text-blue-500">
                 Kian Mansour
             </span>
           </Tooltip>
           &nbsp;also discussed this question in a seminar back in 2018. Leading the development of Roux, he offers a unique POV on the situation, having a much deeper insight than most cubers. He makes a compelling argument that most arguments for this topic are baseless and are not well-structured. For example, someone said, “Felix uses CFOP and has all the current 3x3 records”, which is really just a biased opinion at best. Therefore, he tries to provide a more quantitative conclusion by quantifying each step of the method and pitting them against each other, side by side. In both methods, based on his and other cuber's experience in order to find out, theoretically, which one of the methods are better.
-        </p>
-        <p className="mb-[20px]">
-          Taking into account human limits and general human error, Kian finds that Roux has an average time of 4.0 seconds, while CFOP has an average time of 4.2 seconds. In the end, he also states that his argument is inconclusive, and that slight variations of CFOP will be made in order to compensate for its disadvantage of having  a higher average move count. For example, in CFOP, ZBLL (Zborowski-Bruchem Last Layer), which is a massive set of around 493 algorithms in which PLL and OLL are completed in one algorithm, is more widely used now.
         </p>
         <div className="flex items-center justify-center px-10 my-10">
           <table className="table-fixed border border-collapse">
@@ -206,6 +210,22 @@ function App() {
           </table>
         </div>
 
+        <p className="mb-[20px]">
+          This table was something Kian came up with as the conclusion of his seminar. According to his assumptions about how we generally approach solving using these different methods, and that we have constant TPS (Turns per Second, a metric on how fast you can execute moves), Roux has an average time of 4.0 seconds, wile CFOP has an average time of 4.2 seconds. This is probably due to the generaly lower average move count and relatively high TPS that Roux has, that overshines the higher move count and TPS that CFOP has. However, he also states that this is inconclusive, as there are other things that the CFOP community has developed in order to circumvent this. One example is a massive 493 algorithm set called ZBLL, or Zborowski-Bruchem Last Layer, that aims to complete the Last Layer in 1 algorithm, which reduces the movecount for both OLL and PLL parts in CFOP to be from anywhere from 7 moves to 20 or so moves. 
+        </p>
+
+        <p className="mb-[20px]">
+          Here's a video that shows how much of a difference ZBLL can make:
+        </p>
+
+        <div className="flex flex-col items-center my-[30px]">
+          <video className="flex  w-[50%]" controls disablePictureInPicture>
+            <source src="./zbll.mp4"/>
+          </video>
+        </div>
+
+
+        <h1 className="flex items-center text-2xl font-bold my-[10px]">Conclusions</h1>
         <p className="mb-[20px]">
           
         </p>

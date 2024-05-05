@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 interface DropdownProps {
   text: string;
   desc: string;
-  img?: string;
+  vid?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({text, desc, img}) => {
+const Dropdown: React.FC<DropdownProps> = ({text, desc, vid}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [arrowClass, setArrowClass] = useState<string>('rotate-180');
 
@@ -48,12 +48,11 @@ const Dropdown: React.FC<DropdownProps> = ({text, desc, img}) => {
           <div className='px-[21px] text-justify'>
             {desc}
           </div>
-          {img && 
-            (<div className="flex flex-col items-center justify-center my-[20px]">
-              <img
-                src={img}
-                alt={img}
-              />
+          {vid && 
+            (<div className="flex flex-col items-center my-[20px]">
+              <video className="flex w-[60%]" disablePictureInPicture controls>
+                <source src={vid} />
+              </video>
             </div>
             )
           }
